@@ -13,8 +13,10 @@ new_w = ImUtils.resize(image, new_width: 500)
 new_h = ImUtils.resize(image, new_height: 500)
 new_wh = ImUtils.resize(image, new_width: 250, new_height: 250)
 
+resized_arr = [new_w, new_h, new_wh]
+
 # loop through resized images and display
-for r in [new_w, new_h, new_wh] do
+resized_arr.each do |r|
 	window_name = "new size: (#{r.size.width}, #{r.size.height})"
 	window = GUI::Window.new(window_name)
 	window.show(r)
