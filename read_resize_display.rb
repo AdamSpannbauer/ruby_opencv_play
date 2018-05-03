@@ -6,7 +6,7 @@ include OpenCV
 image = CvMat.load('test_pic.png')
 
 # print image dims
-puts "orig image size: (#{image.size.width}, #{image.size.height})"
+puts "orig image size: (#{image.columns}, #{image.rows})"
 
 # perform different resizings and display
 new_w = ImUtils.resize(image, new_width: 500)
@@ -17,7 +17,7 @@ resized_arr = [new_w, new_h, new_wh]
 
 # loop through resized images and display
 resized_arr.each do |r|
-	window_name = "new size: (#{r.size.width}, #{r.size.height})"
+	window_name = "new size: (#{r.columns}, #{r.width})"
 	window = GUI::Window.new(window_name)
 	window.show(r)
 

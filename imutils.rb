@@ -7,8 +7,8 @@ module ImUtils
 	# function to use aspect ratio for easier resizing
 	def resize(image, new_width: nil, new_height: nil, method: CV_INTER_LINEAR)
 		# get current image dims
-		w = image.size.width
-		h = image.size.height
+		w = image.columns
+		h = image.rows
 
 		# check if user provided any resize info
 		if new_height.nil? && new_width.nil?
